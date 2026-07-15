@@ -491,7 +491,33 @@ section { position: relative; }
 .gallery__text h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
 .gallery__text p { color: var(--ink-soft); }
 
-.gallery__portrait { max-width: 460px; margin: 0 auto; }
+.gallery__pair {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+}
+.gallery__pair figure {
+  margin: 0;
+  max-width: 400px;
+  overflow: hidden;
+  border-radius: 3px;
+  position: relative;
+}
+.gallery__pair img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+.gallery__note h3 {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+}
+.gallery__note p:last-child { color: var(--ink-soft); }
+
+@media (max-width: 780px) {
+  .gallery__pair { grid-template-columns: 1fr; }
+  .gallery__pair figure { max-width: 340px; margin: 0 auto; }
+}
 
 @media (max-width: 780px) {
   .gallery__split { grid-template-columns: 1fr; }
