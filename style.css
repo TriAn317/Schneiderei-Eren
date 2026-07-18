@@ -384,7 +384,7 @@ section { position: relative; }
   background-size: cover;
   background-position: center 35%;
   filter: grayscale(0.35) saturate(0.9);
-  opacity: 0.22;
+  opacity: 0.40;
   z-index: 0;
 }
 .services::after {
